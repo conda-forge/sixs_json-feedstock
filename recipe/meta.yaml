@@ -10,7 +10,7 @@ source:
   sha256: 2d8511ed1898f4a62430df542e94d8fb4d9913ddbb2b535bcac3d649fb677ceb
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
@@ -23,7 +23,7 @@ requirements:
     - {{ stdlib("m2w64_c") }}  # [win]
     - {{ compiler("m2w64_c") }}  # [win]
     - {{ compiler("m2w64_fortran") }}  # [win]
-    - posix  # [win]
+    - m2-base  # [win]
   run:
     - m2w64-gcc-libgfortran  # [win]
 
