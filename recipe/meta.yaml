@@ -14,12 +14,16 @@ build:
 
 requirements:
   build:
+    - {{ stdlib("c") }}                # [unix]
+    - {{ compiler('c') }}              # [unix]
+    - {{ compiler('cxx') }}            # [unix]
+    - {{ compiler('fortran') }}        # [unix]
+    - {{ stdlib("m2w64_c") }}          # [unix]
+    - {{ compiler('m2w64_c') }}        # [unix]
+    - {{ compiler('m2w64_cxx') }}      # [unix]
+    - {{ compiler('m2w64_fortran') }}  # [unix]
     - cmake
     - make
-    - {{ stdlib("c") }}
-    - {{ compiler('c') }}
-    - {{ compiler('cxx') }}
-    - {{ compiler('fortran') }}
 
 test:
   files:
